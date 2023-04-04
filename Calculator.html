@@ -1,0 +1,78 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+
+        <h1 >Calculator</h1>
+        <form>
+            <label>A :</label>
+            <input type="number" maxlength="3" id="A" value="sample">
+            <label for="calculator">operation</label>
+            <select name="calculator" id="cal">
+                <option value="Addition">+</option>
+                <option value="Substraction">-</option>
+                <option value="Multiplication">*</option>
+                <option value="Division">/</option>
+            </select>
+           
+
+
+            <label>B:</label>
+            <input type="number" id="B" value="sample">
+
+            <button type="button" onclick="Operation()">=</button>
+            <input id="result" value="">
+        </form>
+        <script language="javascript" type="text/javascript">
+            
+            function Operation(){
+                var v1 =  parseInt(document.getElementById('A').value)
+                var v2 =  parseInt(document.getElementById('B').value)
+                
+                function Add(a,b){
+                var res = a + b;
+                return res;
+
+               }
+                function Subs(a,b){
+                var res = a - b;
+                return res;
+
+               }
+               function Mul(a,b){
+                var res = a * b;
+                return res;
+
+               }
+               function Div(a,b){
+                var res = a / b;
+                return res;
+
+               }
+
+
+
+               if(document.getElementById('cal').value == "Addition"){
+                
+                document.getElementById("result").value = Add(v1,v2);
+               }
+               if(document.getElementById('cal').value == "Substraction"){
+                
+                document.getElementById("result").value = Subs(v1,v2);
+               }
+               if(document.getElementById('cal').value == "Multiplication"){
+                
+                document.getElementById("result").value = Mul(v1,v2);
+               }
+               if(document.getElementById('cal').value == "Division"){
+            
+                document.getElementById("result").value = Div(v1,v2);
+               }
+
+                
+            }
+
+        </script>
+    </body>
+</html>
